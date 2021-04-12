@@ -12,13 +12,15 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @ApiResource()
  * @ORM\Entity(repositoryClass=CategorieRepository::class)
-* @ApiResource(
-    *     collectionOperations={"get"},
-    *     itemOperations={"get"},
-    * )
-    */
+ * @ApiResource(
+ *     collectionOperations={
+ *         "get"
+ *     },
+ *     itemOperations={
+ *         "get"
+ *     })
+ */
     class Categorie
 {
     /**

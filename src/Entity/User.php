@@ -11,15 +11,20 @@ use Symfony\Component\Serializer\Annotation\Groups;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 /**
- * @ApiResource()
- * @ORM\Entity(repositoryClass=UserRepository::class)
+ * @ORM\Entity(repositoryClass=ArticleRepository::class)
+ * @ApiResource(
+ *     collectionOperations={
+ *         "get",
+ *         "post"
+ *     },
+ *     itemOperations={
+ *         "get",
+ *         "delete",
+ *         "patch"
+ *     },
+ * )
  *
-* @ApiResource(
-    *     collectionOperations={"get","post"},
-    *     itemOperations={"get","post"},
-    *normalizationContext={"groups"={"user:read"}}
-    * )
-    */
+ */
 class User
 {
     /**

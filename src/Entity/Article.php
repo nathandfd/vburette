@@ -12,15 +12,19 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @ApiResource()
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
-* @ApiResource(
+ * @ApiResource(
  *     collectionOperations={
  *         "get",
  *         "post"
  *     },
- *     itemOperations= {"get","delete","patch"}
+ *     itemOperations={
+ *         "get",
+ *         "delete",
+ *         "patch"
+ *     },
  * )
+ *
  */
  class Article
 {
