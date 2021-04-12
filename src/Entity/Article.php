@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource()
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
  */
+
 class Article
 {
     /**
