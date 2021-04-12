@@ -18,9 +18,7 @@ use Doctrine\Common\Collections\Collection;
  *         "post"
  *     },
  *     itemOperations={
- *         "get",
- *         "delete",
- *         "patch"
+ *         "get"
  *     },
  * )
  *
