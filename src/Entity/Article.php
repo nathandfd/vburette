@@ -27,7 +27,7 @@ class Article
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $decription;
+    private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -66,12 +66,12 @@ class Article
         return $this;
     }
 
-    public function getDecription(): ?string
+    public function getDescription(): ?string
     {
         return $this->decription;
     }
 
-    public function setDecription(string $decription): self
+    public function setDescription(string $decription): self
     {
         $this->decription = $decription;
 
