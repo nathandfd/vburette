@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource()
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
  */
-
+#[ApiResource(collectionOperations: ['get','post','delete','patch'],itemOperations: ['get','post','delete','patch'],)]
 class Article
 {
     /**

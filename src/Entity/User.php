@@ -10,10 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ApiResource()
  * @ORM\Entity(repositoryClass=UserRepository::class)
  */
-#[ApiResource(
-    collectionOperations: ['get','post'],
-    itemOperations: ['get','post'],
-)]
+#[ApiResource(collectionOperations: ['get','post'],itemOperations: ['get','post'],)]
 class User
 {
     /**
