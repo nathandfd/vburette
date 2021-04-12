@@ -19,11 +19,7 @@ use Doctrine\Common\Collections\Collection;
  *         "get",
  *         "post"
  *     },
- *     itemOperations={
- *         "get",
- *         "delete",
- *         "patch"
- *     },
+ *     itemOperations= {"get","delete","patch"}
  * )
  */
  class Article
