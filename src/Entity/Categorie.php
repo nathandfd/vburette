@@ -9,9 +9,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ApiResource()
  * @ORM\Entity(repositoryClass=CategorieRepository::class)
- */
-#[ApiResource(collectionOperations: ['get'],itemOperations: ['get'],)]
-class Categorie
+* @ApiResource(
+    *     collectionOperations={"get"},
+    *     itemOperations={"get"},
+    * )
+    */
+    class Categorie
 {
     /**
      * @ORM\Id
