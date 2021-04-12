@@ -20,6 +20,12 @@ use Doctrine\Common\Collections\Collection;
  *     itemOperations={
  *         "get"
  *     })
+ * @ApiFilter(
+ *     SearchFilter::class,
+ *     properties={
+ *          "name"="partial"
+ *     }
+ * )
  */
     class Categorie
 {

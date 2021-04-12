@@ -21,7 +21,12 @@ use Doctrine\Common\Collections\Collection;
  *         "get"
  *     },
  * )
- *
+ * @ApiFilter(
+ *     SearchFilter::class,
+ *     properties={
+ *          "fullname"="exact"
+ *     }
+ * )
  */
 class User
 {

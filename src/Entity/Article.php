@@ -24,7 +24,13 @@ use Doctrine\Common\Collections\Collection;
  *         "patch"
  *     },
  * )
- *
+ * @ApiFilter(
+ *     SearchFilter::class,
+ *     properties={
+ *          "name"="partial",
+ *          "categorie"="partial"
+ *     }
+ * )
  */
  class Article
 {
