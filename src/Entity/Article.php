@@ -15,10 +15,17 @@ use Doctrine\Common\Collections\Collection;
  * @ApiResource()
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
 * @ApiResource(
-    *     collectionOperations={"get","post","delete","patch"},
-    *     itemOperations={"get","post","delete","patch"},
-    * )
-    */
+ *     collectionOperations={
+ *         "get",
+ *         "post"
+ *     },
+ *     itemOperations={
+ *         "get",
+ *         "delete",
+ *         "patch"
+ *     },
+ * )
+ */
  class Article
 {
     /**
