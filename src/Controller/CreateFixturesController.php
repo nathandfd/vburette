@@ -11,8 +11,12 @@ class CreateFixturesController extends AbstractController
     /**
      * @Route("/create/fixtures", name="create_fixtures")
      */
-    public function index(): Response
+    public function index(EntityManagerInterface $em): Response
     {
+        $generator = \Faker\Factory::create('fr_FR');
+        $populator = new \Faker\ORM\Doctrine\Populator($generator, $em);
+        $populator->addEntity('Article', 1);
+        $insertedPKs = $populator->execute();
         return $this->render('create_fixtures/index.html.twig', [
             'controller_name' => 'CreateFixturesController',
         ]);
