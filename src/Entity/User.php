@@ -15,6 +15,7 @@ use ApiPlatform\Core\Bridge\Doctrine\Orm\Filter\SearchFilter;
 * @ApiResource(
     *     collectionOperations={"get","post"},
     *     itemOperations={"get","post"},
+    *normalizationContext={"groups"={"user:read"}}
     * )
     */
 class User
@@ -28,16 +29,19 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"user:read"})
      */
     private $fullname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"user:read"})
      */
     private $email;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Groups({"user:read"})
      */
     private $createdAt;
 
