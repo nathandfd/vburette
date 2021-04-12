@@ -23,6 +23,7 @@ use Doctrine\Common\Collections\Collection;
  *         "delete",
  *         "patch"
  *     },
+ *      attributes={"pagination_items_per_page"=20}
  * )
  * @ApiFilter(
  *     SearchFilter::class,

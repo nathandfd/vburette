@@ -20,6 +20,7 @@ use Doctrine\Common\Collections\Collection;
  *     itemOperations={
  *         "get"
  *     },
+ * attributes={"pagination_items_per_page"=5}
  * )
  * @ApiFilter(
  *     SearchFilter::class,
